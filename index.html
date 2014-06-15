@@ -11,15 +11,30 @@
 <div id='p_pr' style='background-color: #09F; width:0%; height: 20px; text-align: center; font-family: Calibri; font-size: 14px;'></div>
 </div>
 
-<button id='animate'>Animate</button>
-
+<button id='animate1'>50%</button>
+<button id='animate2'>100%</button>
+<button id='unload'>Unload</button>
 <script>
-$('#animate').click(function(){
-	progress('p_pr', {value:50,text:true, goBack:false, errors:true});
+test = false;
+$('#animate1').click(function(){
+	progressComplete = progress('p_pr', {value:50,text:true, goBack:false, errors:true});
 	});
 $('#animate2').click(function(){
-	progress('p_pr', {value:100,text:true, goBack:false});
+	progressComplete = progress('p_pr', {value:100,text:true, goBack:false, errors:true});
 	});
+$('#unload').click(function(){
+	progressComplete = progress('p_pr', {value:0,text:true, goBack:true});
+	
+	interval = setInterval(function(){
+			if(progressComplete === true){alert('Completed'); clearInterval(interval) }
+		},100);
+	});	
+interval = setInterval(function(){
+			if(progressComplete === true){alert('Completed'); clearInterval(interval) }
+		},100);	
+
+
+	
 </script>
 </body>
 </html>
