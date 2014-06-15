@@ -17,7 +17,7 @@ WHAT COMES WITH THE PACK
 HOW TO INSTALL
 ==============
 
-Inside your <head></head> tags include jQuery
+Inside your head tags include jQuery
 
   <script src="js/jquery/jquery.js" type="text/javascript"></script>
   
