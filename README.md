@@ -47,6 +47,9 @@ settings = {
 	goBack:false, //True if you want to disable progress drop (Ex. if you want to go from 100% to 50%).
 } THESE VALUES ARE DEFAULT
 
+*Notice that if you input a value like 50.9, the text will write out 51%. This is due to rounding up the values, however this does not impact the element expanding to 50.9%.
+In the future updates I hope to make rounding optional.
+
 HOW TO USE
 ==========
 This is completely up to you, this is how I've done it, and I will explain how it works.
