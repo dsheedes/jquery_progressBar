@@ -40,7 +40,12 @@ $(id).animate(
 		if(text === true){
 		$(id).text(Math.round(current)+'%');//Show progress of current bar
 		}
-	} 
+	},
+	complete:function(){
+		if(value == 100){
+			return progressComplete = true;	
+		}
+	}
  });
 }
  
